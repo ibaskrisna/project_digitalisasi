@@ -116,14 +116,24 @@
                 </div>
 
                 <!-- Technical Support -->
-                <a class="nav-link" data-bs-toggle="collapse" href="#tsMenu" role="button" aria-expanded="false"
-                    aria-controls="tsMenu">
+                <a class="nav-link {{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') ? 'active' : '' }}"
+                    data-bs-toggle="collapse" href="#technicalsupportMenu" role="button"
+                    aria-expanded="{{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') ? 'true' : 'false' }}"
+                    aria-controls="technicalsupportMenu">
                     <span>Technical Support</span>
                 </a>
-                <div class="collapse submenu" id="tsMenu" data-bs-parent="#sidebarMenu">
+                <div class="collapse submenu {{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') ? 'show' : '' }}"
+                    id="technicalsupportMenu">
                     <nav class="nav flex-column">
-                        <a class="nav-link" href="#">Troubleshoot</a>
-                        <a class="nav-link" href="#">Maintance</a>
+                        <a class="nav-link {{ request()->is('troubleshoot') ? 'active' : '' }}" href="/troubleshoot">
+                            Troubleshoot
+                        </a>
+                        <a class="nav-link {{ request()->is('maintenance') ? 'active' : '' }}" href="/maintenance">
+                            Maintenance
+                        </a>
+                        <a class="nav-link {{ request()->is('survey') ? 'active' : '' }}" href="/survey">
+                            Survey
+                        </a>
                         <a class="nav-link" href="#">Survey</a>
                         <a class="nav-link" href="#">Log Survey</a>
                         <a class="nav-link" href="#">Log Instalasi</a>

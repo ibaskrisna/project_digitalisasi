@@ -15,3 +15,14 @@ Route::get('/kontrak', function () {
     return view('kontak');
 });
 
+Route::get('/troubleshoot', function () {
+    return view('troubleshoot');
+});
+
+Route::get('/maintenance', function () {
+    return view('maintenance');
+});
+
+Route::get('/survey', function () {
+    return view('survey');
+});
