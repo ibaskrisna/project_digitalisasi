@@ -116,13 +116,13 @@
                 </div>
 
                 <!-- Technical Support -->
-                <a class="nav-link {{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') ? 'active' : '' }}"
+                <a class="nav-link {{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') || request()->is('logsurvey*') || request()->is('loginstalasi*') || request()->is('logdismantle*') || request()->is('bast*') ? 'active' : '' }}"
                     data-bs-toggle="collapse" href="#technicalsupportMenu" role="button"
-                    aria-expanded="{{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') ? 'true' : 'false' }}"
+                    aria-expanded="{{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') || request()->is('logsurvey*') || request()->is('loginstalasi*') || request()->is('logdismantle*') || request()->is('bast*') ? 'true' : 'false' }}"
                     aria-controls="technicalsupportMenu">
                     <span>Technical Support</span>
                 </a>
-                <div class="collapse submenu {{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') ? 'show' : '' }}"
+                <div class="collapse submenu {{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') || request()->is('logsurvey*') || request()->is('loginstalasi*') || request()->is('logdismantle*') || request()->is('bast*') ? 'show' : '' }}"
                     id="technicalsupportMenu">
                     <nav class="nav flex-column">
                         <a class="nav-link {{ request()->is('troubleshoot') ? 'active' : '' }}" href="/troubleshoot">
@@ -134,11 +134,18 @@
                         <a class="nav-link {{ request()->is('survey') ? 'active' : '' }}" href="/survey">
                             Survey
                         </a>
-                        <a class="nav-link" href="#">Survey</a>
-                        <a class="nav-link" href="#">Log Survey</a>
-                        <a class="nav-link" href="#">Log Instalasi</a>
-                        <a class="nav-link" href="#">Log Dismantle</a>
-                        <a class="nav-link" href="#">BAST</a>
+                        <a class="nav-link {{ request()->is('logsurvey') ? 'active' : '' }}" href="/logsurvey">
+                            Log Survey
+                        </a>
+                        <a class="nav-link {{ request()->is('loginstalasi') ? 'active' : '' }}" href="/loginstalasi">
+                            Log Instalasi
+                        </a>
+                        <a class="nav-link {{ request()->is('logdismantle') ? 'active' : '' }}" href="/logdismantle">
+                            Log Dismantle
+                        </a>
+                        <a class="nav-link {{ request()->is('bast') ? 'active' : '' }}" href="/bast">
+                            BAST
+                        </a>
                         <a class="nav-link" href="#">UAT CCTV</a>
                         <a class="nav-link" href="#">UAT Internet</a>
                         <a class="nav-link" href="#">Daily Maintance Genset</a>

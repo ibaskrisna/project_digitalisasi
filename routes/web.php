@@ -26,3 +26,19 @@ Route::get('/maintenance', function () {
 Route::get('/survey', function () {
     return view('survey');
 });
+
+Route::get('/logsurvey', function () {
+    return view('log_survey');
+});
+
+Route::get('/loginstalasi', function () {
+    return view('log_instalasi');
+});
+
+Route::get('/logdismantle', function () {
+    return view('log_dismantle');
+});
+
+Route::get('/bast', function () {
+    return view('bast');
+});
