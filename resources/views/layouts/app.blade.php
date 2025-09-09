@@ -79,13 +79,13 @@
                 </a>
 
                 <!-- Sales -->
-                <a class="nav-link {{ request()->is('rab*') || request()->is('kontrak*') || request()->is('log customer*') || request()->is('dismantle*') || request()->is('updatedata*')? 'active' : '' }}"
+                <a class="nav-link {{ request()->is('rab*') || request()->is('kontrak*') || request()->is('logcustomer*') || request()->is('dismantle*') || request()->is('updatedata*')? 'active' : '' }}"
                     data-bs-toggle="collapse" href="#salesMenu" role="button"
-                    aria-expanded="{{ request()->is('rab*') || request()->is('kontrak*') || request()->is('log cuastomer*') || request()->is('dismantle*') || request()->is('updatedata*')? 'true' : 'false' }}"
+                    aria-expanded="{{ request()->is('rab*') || request()->is('kontrak*') || request()->is('logcustomer*') || request()->is('dismantle*') || request()->is('updatedata*')? 'true' : 'false' }}"
                     aria-controls="salesMenu">
                     <span>Sales</span>
                 </a>
-                <div class="collapse submenu {{ request()->is('rab*') || request()->is('kontrak*') || request()->is('log customer*') || request()->is('dismantle*') || request()->is('updatedata*')? 'show' : '' }}"
+                <div class="collapse submenu {{ request()->is('rab*') || request()->is('kontrak*') || request()->is('logcustomer*') || request()->is('dismantle*') || request()->is('updatedata*')? 'show' : '' }}"
                     id="salesMenu">
                     <nav class="nav flex-column">
                         <a class="nav-link {{ request()->is('rab') ? 'active' : '' }}" href="/rab">
@@ -94,7 +94,7 @@
                         <a class="nav-link {{ request()->is('kontrak') ? 'active' : '' }}" href="/kontrak">
                             Kontrak Pelanggan Dedicated
                         </a>
-                        <a class="nav-link {{ request()->is('log customer') ? 'active' : '' }}" href="/log customer">
+                        <a class="nav-link {{ request()->is('logcustomer') ? 'active' : '' }}" href="/logcustomer">
                             Status Log Customer
                         </a>
                         <a class="nav-link {{ request()->is('dismantle') ? 'active' : '' }}" href="/dismantle">
