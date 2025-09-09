@@ -79,13 +79,13 @@
                 </a>
 
                 <!-- Sales -->
-                <a class="nav-link {{ request()->is('rab*') || request()->is('kontrak*') ? 'active' : '' }}"
+                <a class="nav-link {{ request()->is('rab*') || request()->is('kontrak*') || request()->is('log customer*') || request()->is('dismantle*') || request()->is('updatedata*')? 'active' : '' }}"
                     data-bs-toggle="collapse" href="#salesMenu" role="button"
-                    aria-expanded="{{ request()->is('rab*') || request()->is('kontrak*') ? 'true' : 'false' }}"
+                    aria-expanded="{{ request()->is('rab*') || request()->is('kontrak*') || request()->is('log cuastomer*') || request()->is('dismantle*') || request()->is('updatedata*')? 'true' : 'false' }}"
                     aria-controls="salesMenu">
                     <span>Sales</span>
                 </a>
-                <div class="collapse submenu {{ request()->is('rab*') || request()->is('kontrak*') ? 'show' : '' }}"
+                <div class="collapse submenu {{ request()->is('rab*') || request()->is('kontrak*') || request()->is('log customer*') || request()->is('dismantle*') || request()->is('updatedata*')? 'show' : '' }}"
                     id="salesMenu">
                     <nav class="nav flex-column">
                         <a class="nav-link {{ request()->is('rab') ? 'active' : '' }}" href="/rab">
@@ -94,9 +94,14 @@
                         <a class="nav-link {{ request()->is('kontrak') ? 'active' : '' }}" href="/kontrak">
                             Kontrak Pelanggan Dedicated
                         </a>
-                        <a class="nav-link" href="#">Status Log Customer</a>
-                        <a class="nav-link" href="#">Form Perubahan Data (Dismantle)</a>
-                        <a class="nav-link" href="#">Update Data Customer</a>
+                        <a class="nav-link {{ request()->is('log customer') ? 'active' : '' }}" href="/log customer">
+                            Status Log Customer
+                        </a>
+                        <a class="nav-link {{ request()->is('dismantle') ? 'active' : '' }}" href="/dismantle">
+                            Perubahan Data (Dismantle)
+                        </a>
+                        <a class="nav-link {{ request()->is('updatedata') ? 'active' : '' }}" href="/updatedata">
+                            Update Data Customer</a>
                     </nav>
                 </div>
 
