@@ -15,7 +15,7 @@ Route::get('/kontrak', function () {
     return view('kontak');
 });
 
-Route::get('/log customer', function () {
+Route::get('/logcustomer', function () {
     return view('logcustomer');
 });
 
