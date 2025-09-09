@@ -6,7 +6,8 @@
 
 @section('content')
 <div class="d-flex justify-content-start mb-3">
-    <button class="btn btn-primary">Tambah Data</button>
+   <a href="{{ route('tambahdatakontrak') }}" class="btn btn-primary">Tambah Data</a>
+</a>
 </div>
 
 <div class="table-responsive">
