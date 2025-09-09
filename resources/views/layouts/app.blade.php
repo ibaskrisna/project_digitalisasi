@@ -116,20 +116,20 @@
                 </div>
 
                 <!-- Technical Support -->
-                <a class="nav-link {{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') || request()->is('logsurvey*') || request()->is('loginstalasi*') || request()->is('logdismantle*') || request()->is('bast*') || request()->is('uatcctv*') || request()->is('uatinternet*') || request()->is('genset*') ? 'active' : '' }}"
+                <a class="nav-link {{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') || request()->is('logsurvey*') || request()->is('loginstalasi*') || request()->is('logdismantle*') || request()->is('bast*') || request()->is('uatcctv*') || request()->is('uatinternet*') || request()->is('genset*') || request()->is('tambah-data-ts*') || request()->is('tambah-data-maintenance*') || request()->is('tambah-data-survey*') || request()->is('tambah-data-logsurvey*') || request()->is('tambah-data-loginstalasi*') || request()->is('tambah-data-logdismantle*') || request()->is('tambah-data-bast*') || request()->is('tambah-data-uatcctv*') || request()->is('tambah-data-uatinternet*') || request()->is('tambah-data-genset*') ? 'active' : '' }}"
                     data-bs-toggle="collapse" href="#technicalsupportMenu" role="button"
-                    aria-expanded="{{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') || request()->is('logsurvey*') || request()->is('loginstalasi*') || request()->is('logdismantle*') || request()->is('bast*') || request()->is('uatcctv*') || request()->is('uatinternet*') || request()->is('genset*') ? 'true' : 'false' }}"
+                    aria-expanded="{{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') || request()->is('logsurvey*') || request()->is('loginstalasi*') || request()->is('logdismantle*') || request()->is('bast*') || request()->is('uatcctv*') || request()->is('uatinternet*') || request()->is('genset*') || request()->is('tambah-data-ts*') || request()->is('tambah-data-maintenance*') || request()->is('tambah-data-survey*') || request()->is('tambah-data-logsurvey*') || request()->is('tambah-data-loginstalasi*') || request()->is('tambah-data-logdismantle*') || request()->is('tambah-data-bast*') || request()->is('tambah-data-uatcctv*') || request()->is('tambah-data-uatinternet*') || request()->is('tambah-data-genset*') ? 'true' : 'false' }}"
                     aria-controls="technicalsupportMenu">
                     <span>Technical Support</span>
                 </a>
-                <div class="collapse submenu {{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') || request()->is('logsurvey*') || request()->is('loginstalasi*') || request()->is('logdismantle*') || request()->is('bast*') || request()->is('uatcctv*') || request()->is('uatinternet*') || request()->is('genset*') ? 'show' : '' }}"
+                <div class="collapse submenu {{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') || request()->is('logsurvey*') || request()->is('loginstalasi*') || request()->is('logdismantle*') || request()->is('bast*') || request()->is('uatcctv*') || request()->is('uatinternet*') || request()->is('genset*') || request()->is('tambah-data-ts*') || request()->is('tambah-data-maintenance*') || request()->is('tambah-data-survey*') || request()->is('tambah-data-logsurvey*') || request()->is('tambah-data-loginstalasi*') || request()->is('tambah-data-logdismantle*') || request()->is('tambah-data-bast*') || request()->is('tambah-data-uatcctv*') || request()->is('tambah-data-uatinternet*') || request()->is('tambah-data-genset*') ? 'show' : '' }}"
                     id="technicalsupportMenu" data-bs-parent="#sidebarMenu">
                     <nav class="nav flex-column">
                         <a class="nav-link {{ request()->is('troubleshoot') ? 'active' : '' }}" href="/troubleshoot">
                             Troubleshoot
                         </a>
                         <a class="nav-link {{ request()->is('maintenance') ? 'active' : '' }}" href="/maintenance">
-                            Maintenance
+                            <em>Maintenance</em>
                         </a>
                         <a class="nav-link {{ request()->is('survey') ? 'active' : '' }}" href="/survey">
                             Survey
@@ -153,7 +153,7 @@
                             UAT Internet
                         </a>
                         <a class="nav-link {{ request()->is('genset') ? 'active' : '' }}" href="/genset">
-                            Daily Maintenance Genset
+                            <em>Daily Maintenance Genset</em>
                         </a>
                     </nav>
                 </div>
