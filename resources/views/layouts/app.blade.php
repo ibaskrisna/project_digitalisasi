@@ -155,10 +155,13 @@
                     aria-controls="financeMenu">
                     <span>Finance</span>
                 </a>
-                <div class="collapse submenu" id="financeMenu" data-bs-parent="#sidebarMenu">
+                <div class="collapse submenu {{ request()->is('permintannbbm*') || request()->is('pengajuanbiaya*') ? 'show' : '' }}" 
+                    id="financeMenu" data-bs-parent="#sidebarMenu">
                     <nav class="nav flex-column">
-                        <a class="nav-link" href="#">Permintaan BBM</a>
-                        <a class="nav-link" href="#">Pengajuan Biaya</a>
+                        <a class="nav-link {{ request()->is('permintaanbbm') ? 'active' : '' }}" href="/permintaanbbm"> 
+                            Permintaan BBM</a>
+                        <a class="nav-link {{ request()->is('pengajuanbiaya') ? 'active' : '' }}" href="/pengajuanbiaya">
+                            Pengajuan Biaya</a>
                     </nav>
                 </div>
 
