@@ -86,7 +86,7 @@
                     <span>Sales</span>
                 </a>
                 <div class="collapse submenu {{ request()->is('rab*') || request()->is('kontrak*') ? 'show' : '' }}"
-                    id="salesMenu">
+                    id="salesMenu" data-bs-parent="#sidebarMenu">
                     <nav class="nav flex-column">
                         <a class="nav-link {{ request()->is('rab') ? 'active' : '' }}" href="/rab">
                             Rancangan Anggaran Biaya
@@ -116,14 +116,14 @@
                 </div>
 
                 <!-- Technical Support -->
-                <a class="nav-link {{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') || request()->is('logsurvey*') || request()->is('loginstalasi*') || request()->is('logdismantle*') || request()->is('bast*') ? 'active' : '' }}"
+                <a class="nav-link {{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') || request()->is('logsurvey*') || request()->is('loginstalasi*') || request()->is('logdismantle*') || request()->is('bast*') || request()->is('uatcctv*') || request()->is('uatinternet*') || request()->is('genset*') ? 'active' : '' }}"
                     data-bs-toggle="collapse" href="#technicalsupportMenu" role="button"
-                    aria-expanded="{{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') || request()->is('logsurvey*') || request()->is('loginstalasi*') || request()->is('logdismantle*') || request()->is('bast*') ? 'true' : 'false' }}"
+                    aria-expanded="{{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') || request()->is('logsurvey*') || request()->is('loginstalasi*') || request()->is('logdismantle*') || request()->is('bast*') || request()->is('uatcctv*') || request()->is('uatinternet*') || request()->is('genset*') ? 'true' : 'false' }}"
                     aria-controls="technicalsupportMenu">
                     <span>Technical Support</span>
                 </a>
-                <div class="collapse submenu {{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') || request()->is('logsurvey*') || request()->is('loginstalasi*') || request()->is('logdismantle*') || request()->is('bast*') ? 'show' : '' }}"
-                    id="technicalsupportMenu">
+                <div class="collapse submenu {{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') || request()->is('logsurvey*') || request()->is('loginstalasi*') || request()->is('logdismantle*') || request()->is('bast*') || request()->is('uatcctv*') || request()->is('uatinternet*') || request()->is('genset*') ? 'show' : '' }}"
+                    id="technicalsupportMenu" data-bs-parent="#sidebarMenu">
                     <nav class="nav flex-column">
                         <a class="nav-link {{ request()->is('troubleshoot') ? 'active' : '' }}" href="/troubleshoot">
                             Troubleshoot
@@ -146,9 +146,15 @@
                         <a class="nav-link {{ request()->is('bast') ? 'active' : '' }}" href="/bast">
                             BAST
                         </a>
-                        <a class="nav-link" href="#">UAT CCTV</a>
-                        <a class="nav-link" href="#">UAT Internet</a>
-                        <a class="nav-link" href="#">Daily Maintance Genset</a>
+                        <a class="nav-link {{ request()->is('uatcctv') ? 'active' : '' }}" href="/uatcctv">
+                            UAT CCTV
+                        </a>
+                        <a class="nav-link {{ request()->is('uatinternet') ? 'active' : '' }}" href="/uatinternet">
+                            UAT Internet
+                        </a>
+                        <a class="nav-link {{ request()->is('genset') ? 'active' : '' }}" href="/genset">
+                            Daily Maintenance Genset
+                        </a>
                     </nav>
                 </div>
 

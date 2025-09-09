@@ -42,3 +42,15 @@ Route::get('/logdismantle', function () {
 Route::get('/bast', function () {
     return view('bast');
 });
+
+Route::get('/uatcctv', function () {
+    return view('uatcctv');
+});
+
+Route::get('/uatinternet', function () {
+    return view('uatinternet');
+});
+
+Route::get('/genset', function () {
+    return view('genset');
+});
