@@ -102,19 +102,29 @@
 
 
                 <!-- Marketing -->
-                <a class="nav-link" data-bs-toggle="collapse" href="#marketingMenu" role="button" aria-expanded="false"
+                <a class="nav-link {{ request()->is('prospekpelangganbaru*') || request()->is('closingpenjualan*') || request()->is('followuppelangganaktif*') || request()->is('laporanpenjualan*')? 'active' : '' }}"
+                    data-bs-toggle="collapse" href="#marketingMenu" role="button"
+                    aria-expanded="{{ request()->is('prospekpelangganbaru*') || request()->is('closingpenjualan*') || request()->is('followuppelangganaktif*') || request()->is('laporanpenjualan*')? 'true' : 'false' }}"
                     aria-controls="marketingMenu">
                     <span>Marketing</span>
                 </a>
-                <div class="collapse submenu" id="marketingMenu" data-bs-parent="#sidebarMenu">
+                <div class="collapse submenu {{ request()->is('prospekpelangganbaru*') || request()->is('closingpenjualan*') || request()->is('followuppelangganaktif*') || request()->is('laporanpenjualan*')? 'show' : '' }}"
+                    id="marketingMenu">
                     <nav class="nav flex-column">
-                        <a class="nav-link" href="#">Prospek Pelanggan Baru</a>
-                        <a class="nav-link" href="#">Closing Penjualan</a>
-                        <a class="nav-link" href="#">Follow Up Pelanggan Aktif</a>
-                        <a class="nav-link" href="#">Laporan Penjualan</a>
+                        <a class="nav-link {{ request()->is('prospekpelangganbaru') ? 'active' : '' }}" href="/prospekpelangganbaru">
+                            Prospek Pelanggan Baru
+                        </a>
+                        <a class="nav-link {{ request()->is('closingpenjualan') ? 'active' : '' }}" href="/closingpenjualan">
+                            Closing Penjualan
+                        </a>
+                        <a class="nav-link {{ request()->is('followuppelangganaktif') ? 'active' : '' }}" href="/followuppelangganaktif">
+                            Follow Up Pelanggan Aktif
+                        </a>
+                        <a class="nav-link {{ request()->is('laporanpenjualan') ? 'active' : '' }}" href="/laporanpenjualan">
+                            Laporan Penjualan
+                        </a>
                     </nav>
                 </div>
-
                 <!-- Technical Support -->
                 <a class="nav-link" data-bs-toggle="collapse" href="#tsMenu" role="button" aria-expanded="false"
                     aria-controls="tsMenu">
