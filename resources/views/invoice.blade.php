@@ -63,9 +63,9 @@
         </table>
     </div>
 
-    {{-- Tombol --}}
-    <div class="d-flex gap-2 mt-3">
-        <a href="{{ url()->previous() }}" class="btn btn-secondary">Kembali</a>
-    </div>
+   {{-- Tombol --}}
+<div class="d-flex gap-2 mt-3">
+    <a href="{{ route('logcustomer') }}" class="btn btn-secondary">Kembali</a>
+</div>
 </div>
 @endsection

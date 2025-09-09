@@ -19,7 +19,7 @@ Route::get('/kontrak', function () {
 
 Route::get('/logcustomer', function () {
     return view('logcustomer');
-});
+})->name('logcustomer');
 
 Route::get('/dismantle', function () {
     return view('dismantle');

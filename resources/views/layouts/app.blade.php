@@ -79,13 +79,13 @@
                 </a>
 
                 <!-- Sales -->
-                <a class="nav-link {{ request()->is('rab*') || request()->is('kontrak*') || request()->is('logcustomer*') || request()->is('dismantle*') || request()->is('updatedata*') || request()->is('detailcustomer*') || request()->is('invoice*') || request()->is('tambahdatadismantle*') || request()->is('tambahdatakontrak*') || request()->is('tambahdatarab*') || request()->is('tambahlogcustomer*') || request()->is('updatedatacustomer*')? 'active' : '' }}"
+                <a class="nav-link {{ request()->is('rab*') || request()->is('kontrak*') || request()->is('customer/*/detail')  || request()->is('logcustomer*') || request()->is('dismantle*') || request()->is('updatedata*') || request()->is('detailcustomer*') || request()->is('customer/*/invoice*') || request()->is('tambahdatadismantle*') || request()->is('tambahdatakontrak*') || request()->is('tambahdatarab*') || request()->is('tambahlogcustomer*') || request()->is('updatedatacustomer*')? 'active' : '' }}"
                     data-bs-toggle="collapse" href="#salesMenu" role="button"
-                    aria-expanded="{{ request()->is('rab*') || request()->is('kontrak*') || request()->is('logcustomer*') || request()->is('dismantle*') || request()->is('updatedata*') || request()->is('detailcustomer*') || request()->is('invoice*') || request()->is('tambahdatadismantle*') || request()->is('tambahdatakontrak*') || request()->is('tambahdatarab*') || request()->is('tambahlogcustomer*') || request()->is('updatedatacustomer*')? 'true' : 'false' }}"
+                    aria-expanded="{{ request()->is('rab*') || request()->is('kontrak*') || request()->is('customer/*/detail')  || request()->is('logcustomer*') || request()->is('dismantle*') || request()->is('updatedata*') || request()->is('detailcustomer*') || request()->is('customer/*/invoice*') || request()->is('tambahdatadismantle*') || request()->is('tambahdatakontrak*') || request()->is('tambahdatarab*') || request()->is('tambahlogcustomer*') || request()->is('updatedatacustomer*')? 'true' : 'false' }}"
                     aria-controls="salesMenu">
                     <span>Sales</span>
                 </a>
-                <div class="collapse submenu {{ request()->is('rab*') || request()->is('kontrak*') || request()->is('logcustomer*') || request()->is('dismantle*') || request()->is('updatedata*') || request()->is('detailcustomer*') || request()->is('invoice*') || request()->is('tambahdatadismantle*') || request()->is('tambahdatakontrak*') || request()->is('tambahdatarab*') || request()->is('tambahlogcustomer*') || request()->is('updatedatacustomer*')? 'show' : '' }}"
+                <div class="collapse submenu {{ request()->is('rab*') || request()->is('customer/*/detail')  || request()->is('kontrak*') || request()->is('logcustomer*') || request()->is('dismantle*') || request()->is('updatedata*') || request()->is('detailcustomer*') || request()->is('customer/*/invoice*') || request()->is('tambahdatadismantle*') || request()->is('tambahdatakontrak*') || request()->is('tambahdatarab*') || request()->is('tambahlogcustomer*') || request()->is('updatedatacustomer*')? 'show' : '' }}"
                     id="salesMenu">
                     <nav class="nav flex-column">
                         <a class="nav-link {{ request()->is('rab') ? 'active' : '' }}" href="/rab">
@@ -101,7 +101,12 @@
                             Perubahan Data (Dismantle)
                         </a>
                         <a class="nav-link {{ request()->is('updatedata') ? 'active' : '' }}" href="/updatedata">
-                            Update Data Customer</a>
+                            Update Data Customer
+                        </a>
+                        
+                        
+
+
                     </nav>
                 </div>
 

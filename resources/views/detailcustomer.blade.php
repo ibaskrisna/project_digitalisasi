@@ -59,10 +59,10 @@
         </div>
 
         {{-- Tombol --}}
-        <div class="d-flex gap-2 mt-3">
-            <a href="{{ url()->previous() }}" class="btn btn-secondary">Kembali</a>
-            <a href="#" class="btn btn-primary">Edit</a>
-        </div>
+<div class="d-flex gap-2 mt-3">
+    <a href="{{ route('logcustomer') }}" class="btn btn-secondary">Kembali</a>
+    <a href="#" class="btn btn-primary">Edit</a>
+</div>
     </form>
 </div>
 @endsection
