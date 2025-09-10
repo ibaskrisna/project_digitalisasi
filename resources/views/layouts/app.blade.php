@@ -102,19 +102,29 @@
 
 
                 <!-- Marketing -->
-                <a class="nav-link" data-bs-toggle="collapse" href="#marketingMenu" role="button" aria-expanded="false"
+                <a class="nav-link {{ request()->is('prospekpelangganbaru*') || request()->is('closingpenjualan*') || request()->is('followuppelangganaktif*') || request()->is('laporanpenjualan*')? 'active' : '' }}"
+                    data-bs-toggle="collapse" href="#marketingMenu" role="button"
+                    aria-expanded="{{ request()->is('prospekpelangganbaru*') || request()->is('closingpenjualan*') || request()->is('followuppelangganaktif*') || request()->is('laporanpenjualan*')? 'true' : 'false' }}"
                     aria-controls="marketingMenu">
                     <span>Marketing</span>
                 </a>
-                <div class="collapse submenu" id="marketingMenu" data-bs-parent="#sidebarMenu">
+                <div class="collapse submenu {{ request()->is('prospekpelangganbaru*') || request()->is('closingpenjualan*') || request()->is('followuppelangganaktif*') || request()->is('laporanpenjualan*')? 'show' : '' }}"
+                    id="marketingMenu">
                     <nav class="nav flex-column">
-                        <a class="nav-link" href="#">Prospek Pelanggan Baru</a>
-                        <a class="nav-link" href="#">Closing Penjualan</a>
-                        <a class="nav-link" href="#">Follow Up Pelanggan Aktif</a>
-                        <a class="nav-link" href="#">Laporan Penjualan</a>
+                        <a class="nav-link {{ request()->is('prospekpelangganbaru') ? 'active' : '' }}" href="/prospekpelangganbaru">
+                            Prospek Pelanggan Baru
+                        </a>
+                        <a class="nav-link {{ request()->is('closingpenjualan') ? 'active' : '' }}" href="/closingpenjualan">
+                            Closing Penjualan
+                        </a>
+                        <a class="nav-link {{ request()->is('followuppelangganaktif') ? 'active' : '' }}" href="/followuppelangganaktif">
+                            Follow Up Pelanggan Aktif
+                        </a>
+                        <a class="nav-link {{ request()->is('laporanpenjualan') ? 'active' : '' }}" href="/laporanpenjualan">
+                            Laporan Penjualan
+                        </a>
                     </nav>
                 </div>
-
                 <!-- Technical Support -->
                 <a class="nav-link {{ request()->is('troubleshoot*') || request()->is('maintenance*') || request()->is('survey*') || request()->is('logsurvey*') || request()->is('loginstalasi*') || request()->is('logdismantle*') || request()->is('bast*') || request()->is('uatcctv*') || request()->is('uatinternet*') || request()->is('genset*') || request()->is('tambah-data-ts*') || request()->is('tambah-data-maintenance*') || request()->is('tambah-data-survey*') || request()->is('tambah-data-logsurvey*') || request()->is('tambah-data-loginstalasi*') || request()->is('tambah-data-logdismantle*') || request()->is('tambah-data-bast*') || request()->is('tambah-data-uatcctv*') || request()->is('tambah-data-uatinternet*') || request()->is('tambah-data-genset*') ? 'active' : '' }}"
                     data-bs-toggle="collapse" href="#technicalsupportMenu" role="button"
