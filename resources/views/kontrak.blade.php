@@ -1,14 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Technical Support - Log Instalasi')
+@section('title', 'Sales - Kontak')
 
-@section('page-title', 'Status Log Instalasi')
+@section('page-title', 'Kontrak Dengan Pelanggan')
 
 @section('content')
 <div class="d-flex justify-content-start mb-3">
-    <a href="{{ route('tambah_data_loginstalasi') }}" class="btn btn-primary">
-        Tambah Data
-    </a>
+   <a class="btn btn-primary">Tambah Data</a>
+</a>
 </div>
 
 <div class="table-responsive">
@@ -16,19 +15,12 @@
         <thead class="text-center">
             <tr>
                 <th>No.</th>
-                <th>No. Tiket</th>
-                <th>PIC</th>
-                <th>Support By</th>
-                <th>Issued Date</th>
-                <th>Customer</th>
-                <th>Contact Person</th>
-                <th>Area</th>
-                <th>Product</th>
-                <th>Kategori</th>
-                <th>Keterangan</th>
-                <th>Status</th>
-                <th>Close Date</th>
-                <th>No. WO</th>
+                <th>Nama Customer</th>
+                <th>No Dokumen Kerjasama</th>
+                <th>Tanggal Mulai</th>
+                <th>Tanggal Berakhir</th>
+                <th>Email Customer</th>
+                <th>Dokumen Pendukung</th>
                 <th>Aksi</th>
             </tr>
         </thead>
@@ -36,13 +28,6 @@
             <tr>
                 <td class="text-center">1</td>
                 <td>-</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -63,13 +48,6 @@
             <tr>
                 <td class="text-center">2</td>
                 <td>-</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
