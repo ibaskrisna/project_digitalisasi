@@ -82,7 +82,7 @@
                 <a class="nav-link {{ request()->is('rab*') || request()->is('kontrak*') ? 'active' : '' }}"
                     data-bs-toggle="collapse" href="#salesMenu" role="button"
                     aria-expanded="{{ request()->is('rab*') || request()->is('kontrak*') ? 'true' : 'false' }}"
-                    aria-controls="salesMenu">
+                    aria-controls="salesMenu" >
                     <span>Sales</span>
                 </a>
                 <div class="collapse submenu {{ request()->is('rab*') || request()->is('kontrak*') ? 'show' : '' }}"
@@ -173,17 +173,30 @@
                     </nav>
                 </div>
 
-                <!-- Finance -->
+                <!-- Finance 
                 <a class="nav-link" data-bs-toggle="collapse" href="#financeMenu" role="button" aria-expanded="false"
                     aria-controls="financeMenu">
                     <span>Finance</span>
+                </a> -->
+
+                <a class="nav-link {{ request()->is('permintaanbbm*') || request()->is('pengajuanbiaya*') ? 'active' : '' }}"
+                    data-bs-toggle="collapse" href="#financeMenu" role="button"
+                    aria-expanded="{{ request()->is('permintaanbbm*') || request()->is('pengajuanbiaya*') ? 'true' : 'false' }}"
+                    aria-controls="financeMenu">
+                    <span>Finance</span>
                 </a>
-                <div class="collapse submenu" id="financeMenu" data-bs-parent="#sidebarMenu">
+                <div class="collapse submenu {{ request()->is('permintaanbbm*') || request()->is('pengajuanbiaya') ? 'show' : '' }}"
+                    id="financeMenu" data-bs-parent="#sidebarMenu">
                     <nav class="nav flex-column">
-                        <a class="nav-link" href="#">Permintaan BBM</a>
-                        <a class="nav-link" href="#">Pengajuan Biaya</a>
+                        <a class="nav-link {{ request()->is('permintaanbbm') ? 'active' : '' }}" href="/permintaanbbm">
+                            Permintaan BBM
+                        </a>
+                        <a class="nav-link {{ request()->is('pengajuanbiaya') ? 'active' : '' }}" href="/pengajuanbiaya">
+                            Pengajuan Biaya
+                        </a>
                     </nav>
-                </div>
+                </div>  
+
 
                 <!-- HRD -->
                 <a class="nav-link" data-bs-toggle="collapse" href="#hrdMenu" role="button" aria-expanded="false"
