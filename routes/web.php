@@ -21,7 +21,7 @@ Route::get('/troubleshoot', function () {
 Route::get('/tambah-data-ts', function () {
     return view('tambah_data_ts');
 })->name('tambah_data_ts');
-Route::post('/tambah-data-ts', function (Request $request) {
+Route::post('/tambah-data-ts', function () {
     return redirect('/troubleshoot')->with('success', 'Data berhasil disimpan!');
 });
 
@@ -32,7 +32,7 @@ Route::get('/maintenance', function () {
 Route::get('/tambah-data-maintenance', function () {
     return view('tambah_data_maintenance');
 })->name('tambah_data_maintenance');
-Route::post('/tambah-data-maintenance', function (Request $request) {
+Route::post('/tambah-data-maintenance', function () {
     return redirect('/maintenance')->with('success', 'Data berhasil disimpan!');
 });
 
@@ -43,7 +43,7 @@ Route::get('/survey', function () {
 Route::get('/tambah-data-survey', function () {
     return view('tambah_data_survey');
 })->name('tambah_data_survey');
-Route::post('/tambah-data-survey', function (Request $request) {
+Route::post('/tambah-data-survey', function () {
     return redirect('/survey')->with('success', 'Data berhasil disimpan!');
 });
 
@@ -54,7 +54,7 @@ Route::get('/logsurvey', function () {
 Route::get('/tambah-data-logsurvey', function () {
     return view('tambah_data_logsurvey');
 })->name('tambah_data_logsurvey');
-Route::post('/tambah-data-logsurvey', function (Request $request) {
+Route::post('/tambah-data-logsurvey', function () {
     return redirect('/logsurvey')->with('success', 'Data berhasil disimpan!');
 });
 
@@ -65,7 +65,7 @@ Route::get('/loginstalasi', function () {
 Route::get('/tambah-data-loginstalasi', function () {
     return view('tambah_data_loginstalasi');
 })->name('tambah_data_loginstalasi');
-Route::post('/tambah-data-loginstalasi', function (Request $request) {
+Route::post('/tambah-data-loginstalasi', function () {
     return redirect('/loginstalasi')->with('success', 'Data berhasil disimpan!');
 });
 
@@ -76,7 +76,7 @@ Route::get('/logdismantle', function () {
 Route::get('/tambah-data-logdismantle', function () {
     return view('tambah_data_logdismantle');
 })->name('tambah_data_logdismantle');
-Route::post('/tambah-data-logdismantle', function (Request $request) {
+Route::post('/tambah-data-logdismantle', function () {
     return redirect('/logdismantle')->with('success', 'Data berhasil disimpan!');
 });
 
@@ -87,7 +87,7 @@ Route::get('/bast', function () {
 Route::get('/tambah-data-bast', function () {
     return view('tambah_data_bast');
 })->name('tambah_data_bast');
-Route::post('/tambah-data-bast', function (Request $request) {
+Route::post('/tambah-data-bast', function () {
     return redirect('/bast')->with('success', 'Data berhasil disimpan!');
 });
 
@@ -98,7 +98,7 @@ Route::get('/uatcctv', function () {
 Route::get('/tambah-data-uatcctv', function () {
     return view('tambah_data_uatcctv');
 })->name('tambah_data_uatcctv');
-Route::post('/tambah-data-uatcctv', function (Request $request) {
+Route::post('/tambah-data-uatcctv', function () {
     return redirect('/uatcctv')->with('success', 'Data berhasil disimpan!');
 });
 
@@ -109,7 +109,7 @@ Route::get('/uatinternet', function () {
 Route::get('/tambah-data-uatinternet', function () {
     return view('tambah_data_uatinternet');
 })->name('tambah_data_uatinternet');
-Route::post('/tambah-data-uatinternet', function (Request $request) {
+Route::post('/tambah-data-uatinternet', function () {
     return redirect('/uatinternet')->with('success', 'Data berhasil disimpan!');
 });
 
@@ -120,7 +120,7 @@ Route::get('/genset', function () {
 Route::get('/tambah-data-genset', function () {
     return view('tambah_data_genset');
 })->name('tambah_data_genset');
-Route::post('/tambah-data-genset', function (Request $request) {
+Route::post('/tambah-data-genset', function () {
     return redirect('/genset')->with('success', 'Data berhasil disimpan!');
 });
 Route::get('/permintaanbbm', function () {
