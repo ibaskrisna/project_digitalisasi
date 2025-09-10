@@ -136,17 +136,30 @@
                 </div>
 
                 <!-- Customer Relations -->
-                <a class="nav-link" data-bs-toggle="collapse" href="#crMenu" role="button" aria-expanded="false"
-                    aria-controls="crMenu">
-                    <span>Customer Relations</span>
+                <a class="nav-link {{ request()->is('customercomplaint*') || request()->is('customerrequest*') || request()->is('customervisit*') || request()->is('kepuasanpelanggan*') || request()->is('logcustomerrelationshipstatus*') || request()->is('tambah-data-prospek_pelanggan*') || request()->is('tambah-data-closing_penjualan*') || request()->is('tambah-data-pelanggan_aktif*') || request()->is('tambah-data-laporan_penjualan*') || request()->is('laporanpenjualan*')? 'active' : '' }}"
+                    data-bs-toggle="collapse" href="#CRMenu" role="button"
+                    aria-expanded="{{ request()->is('customercomplaint*') || request()->is('customerrequest*') || request()->is('customervisit*') || request()->is('kepuasanpelanggan*') || request()->is('logcustomerrelationshipstatus*') || request()->is('tambah-data-prospek_pelanggan*') || request()->is('tambah-data-closing_penjualan*') || request()->is('tambah-data-pelanggan_aktif*') || request()->is('tambah-data-laporan_penjualan*') || request()->is('laporanpenjualan*')? 'true' : 'false' }}"
+                    aria-controls="CRMenu">
+                    <span>Customer Relation</span>
                 </a>
-                <div class="collapse submenu" id="crMenu" data-bs-parent="#sidebarMenu">
+                <div class="collapse submenu {{ request()->is('customercomplaint*') || request()->is('customerrequest*') || request()->is('customervisit*') || request()->is('kepuasanpelanggan*') || request()->is('logcustomerrelationshipstatus*') || request()->is('tambah-data-prospek_pelanggan*') || request()->is('tambah-data-closing_penjualan*') || request()->is('tambah-data-pelanggan_aktif*') || request()->is('tambah-data-laporan_penjualan*') || request()->is('laporanpenjualan*')? 'show' : '' }}"
+                    id="CRMenu"data-bs-parent="#sidebarMenu">
                     <nav class="nav flex-column">
-                        <a class="nav-link" href="#">Log Customer Complaint</a>
-                        <a class="nav-link" href="#">Log Customer Request</a>
-                        <a class="nav-link" href="#">Penjadwalan Visit Customer</a>
-                        <a class="nav-link" href="#">Kepuasan Pelanggan</a>
-                        <a class="nav-link" href="#">Log Customer Relationhip Status</a>
+                        <a class="nav-link {{ request()->is('customercomplaint') ? 'active' : '' }}" href="/customercomplaint">
+                            Log Customer Complaint
+                        </a>
+                        <a class="nav-link {{ request()->is('customerrequest') ? 'active' : '' }}" href="/customerrequest">
+                            Log Customer Request
+                        </a>
+                        <a class="nav-link {{ request()->is('customervisit') ? 'active' : '' }}" href="/customervisit">
+                            Penjadwalan Customer Visit
+                        </a>
+                        <a class="nav-link {{ request()->is('kepuasanpelanggan') ? 'active' : '' }}" href="/kepuasanpelanggan">
+                            Kepuasan Pelanggan
+                        </a>
+                         <a class="nav-link {{ request()->is('logcustomerrelationshipstatus') ? 'active' : '' }}" href="/logcustomerrelationshipstatus">
+                           Log Customer Relationship Status
+                        </a>
                     </nav>
                 </div>
 
